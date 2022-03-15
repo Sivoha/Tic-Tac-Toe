@@ -83,7 +83,7 @@ function checkWin() {
 
 function checkDraw() {
     if (cells.every(Element => Element.status != "none")) {
-        sleep(2000);
+        sleep(1500);
         return true;
     }
     return false;
