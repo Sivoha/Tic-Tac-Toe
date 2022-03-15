@@ -1,4 +1,4 @@
-function Cell(cell, cellCharacter, num, status="none", player="1") {
+function Cell(cell, cellCharacter, num) {
     this.cell = cell;
     this.cellCharacter = cellCharacter;
     this.num = num;
@@ -60,7 +60,6 @@ function resetCells() {
         Element.resetStatus();
         Element.resetBackground();
         Element.changePlayerTo1();
-        sleep(50000);
     })
     
 }
@@ -69,9 +68,7 @@ function checkWin() {
     cellNum = [[0, 1, 2], [3, 4, 5], [6, 7, 8],
                 [0, 3, 6], [1, 4, 7], [2, 5, 8],
                 [0, 4, 8], [2, 4, 6]];
-                console.clear();
     for (let i = 0; i < cellNum.length; ++i) {
-        console.log(cells[cellNum[i][0]].status ,cells[cellNum[i][1]].status , cells[cellNum[i][2]].status);
         if ((cells[cellNum[i][0]].status == cells[cellNum[i][1]].status) && (cells[cellNum[i][1]].status == cells[cellNum[i][2]].status) && (cells[cellNum[i][0]].status != "none")) {
             cells[cellNum[i][0]].setRedBackground();
             cells[cellNum[i][1]].setRedBackground()
