@@ -9,11 +9,13 @@ function Cell(cell, cellCharacter, num) {
         if (this.status == "none" && this.player == "1") {
             cellCharacter.style.background = "url('cross.png')";
             cellCharacter.style.backgroundSize = "contain";
+            cellCharacter.style.backgroundRepeat = "no-repeat";
             this.status = "cross";
             cells.forEach(Element => { Element.changePlayerTo2(); });  
         } else if (this.status == "none" && this.player == "2") {
             cellCharacter.style.background = "url('circle.png')";
             cellCharacter.style.backgroundSize = "contain";
+            cellCharacter.style.backgroundRepeat = "no-repeat";
             this.status = "circle";
             cells.forEach(Element => { Element.changePlayerTo1(); }); 
         }
@@ -83,7 +85,7 @@ function checkWin() {
 
 function checkDraw() {
     if (cells.every(Element => Element.status != "none")) {
-        sleep(1500);
+        sleep(2000);
         return true;
     }
     return false;
