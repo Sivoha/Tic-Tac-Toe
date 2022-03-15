@@ -40,7 +40,7 @@ function Cell(cell, cellCharacter, num) {
         this.cell.style.backgroundColor = "deepskyblue";
     }
     this.setRedBackground = () => {
-        this.cell.style.backgroundColor = "red";
+        this.cell.style.backgroundColor = "#B9FC6D";
     }
     this.getStatus = () => {
         return this.status;
