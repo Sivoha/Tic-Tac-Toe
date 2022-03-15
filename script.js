@@ -8,10 +8,12 @@ function Cell(cell, cellCharacter, num) {
     this.makeMove = () => { 
         if (this.status == "none" && this.player == "1") {
             cellCharacter.style.background = "url('cross.png')";
+            cellCharacter.style.backgroundSize = "contain";
             this.status = "cross";
             cells.forEach(Element => { Element.changePlayerTo2(); });  
         } else if (this.status == "none" && this.player == "2") {
             cellCharacter.style.background = "url('circle.png')";
+            cellCharacter.style.backgroundSize = "contain";
             this.status = "circle";
             cells.forEach(Element => { Element.changePlayerTo1(); }); 
         }
