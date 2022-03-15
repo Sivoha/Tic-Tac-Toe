@@ -1,0 +1,27 @@
+.game-grid {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid white;
+    height: 20vw;
+    width: 20vw;
+    background-color: deepskyblue;
+}
+.cell-character {
+    width: 160px;
+    height: 160px;
+    background: none;
+}
